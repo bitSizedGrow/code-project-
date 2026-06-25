@@ -84,8 +84,8 @@ ob_start();
             <table class="ppmis-table">
                 <thead>
                     <tr>
-                        <th>Proponent</th>
                         <th>Project</th>
+                        <th>Proponent</th>
                         <th>Status</th>
                         <th>Refund Progress</th>
                         <th>Financial Report</th>
@@ -113,8 +113,8 @@ ob_start();
                             $projectId       = $p['id'];
                         ?>
                             <tr>
-                                <td><strong><?= h($p['firm_name']) ?></strong></td>
-                                <td><?= h($p['project_title']) ?></td>
+                                <td><strong><?= h($p['project_title']) ?></strong></td>
+                                <td><?= h($p['firm_name']) ?></td>
                                 <td>
                                     <span class="badge-stage <?= h($badgeCls) ?>">
                                         <?= h($stageText) ?>
