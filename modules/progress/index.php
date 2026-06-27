@@ -51,7 +51,7 @@ $stageUrl = [
     'final_untagging' => '/modules/project/stage_final_untagging.php',
     'pre_refunding'  => '/modules/project/stage_pre_refunding.php',
     'refunding'      => '/modules/project/stage_refunding.php',
-    'completed'      => '/modules/project/view.php',
+    'completed'      => '/modules/progress/view.php',
 ];
 
 $stageNextUrl = [
@@ -109,7 +109,7 @@ ob_start();
                             $paid      = (int)$p['paid_refunds'];
                             $refundPct = $total > 0 ? round(($paid / $total) * 100) : 0;
                             $isRefund  = in_array($stage, ['refunding', 'completed']);
-                            $viewUrl   = ($stageUrl[$stage] ?? '/modules/project/view.php') . '?id=' . (int)$p['id'];
+                            $viewUrl   = ($stageUrl[$stage] ?? '/modules/progress/view.php') . '?id=' . (int)$p['id'];
                             $projectId       = $p['id'];
                         ?>
                             <tr>

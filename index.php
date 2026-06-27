@@ -169,7 +169,7 @@ ob_start();
                                     </span>
                                 </td>
                                 <td>
-                                    <a href="<?= h(appPath('modules/project/view.php?id=' . (int)$p['id'])) ?>"
+                                    <a href="<?= h(appPath('modules/progress/view.php?id=' . (int)$p['id'])) ?>"
                                        class="btn-preview" style="font-size:12px;padding:5px 10px;border-radius:6px;text-decoration:none;">
                                         View
                                     </a>

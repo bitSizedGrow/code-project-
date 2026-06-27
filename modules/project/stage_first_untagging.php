@@ -94,7 +94,7 @@ foreach ($subStmt->fetchAll() as $sub) {
 $csrf       = csrfToken();
 $pageTitle  = '1st Untagging Stage';
 $activePage = 'start-project';
-$breadcrumb = '<a href="'.h(appPath('index.php')).'">Dashboard</a> / <a href="'.h(appPath('modules/project/view.php?id='.$projectId)).'">'.h($project['project_title']).'</a> / 1st Untagging';
+$breadcrumb = '<a href="'.h(appPath('index.php')).'">Dashboard</a> / <a href="'.h(appPath('modules/progress/view.php?id='.$projectId)).'">'.h($project['project_title']).'</a> / 1st Untagging';
 
 // Helper to render a doc row
 function docRow(string $label, string $fileKey, string $docType, array $existing, int $projectId): string {
