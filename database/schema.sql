@@ -148,7 +148,6 @@ CREATE TABLE activity_logs (
     project_id INT UNSIGNED,
     action VARCHAR(200) NOT NULL,
     details TEXT,
-    ip_address VARCHAR(45),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     INDEX idx_user (user_id),
     INDEX idx_project (project_id),

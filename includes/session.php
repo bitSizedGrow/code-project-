@@ -96,7 +96,7 @@ function logActivity(int $userId, ?int $projectId, string $action, string $detai
     try {
         $db = getDB();
         $stmt = $db->prepare(
-            "INSERT INTO activity_logs (user_id, project_id, action, details, ip_address)
+            "INSERT INTO activity_logs (user_id, project_id, action, details)
              VALUES (:uid, :pid, :action, :details, :ip)"
         );
         $stmt->execute([
@@ -104,7 +104,7 @@ function logActivity(int $userId, ?int $projectId, string $action, string $detai
             ':pid'     => $projectId,
             ':action'  => $action,
             ':details' => $details,
-            ':ip'      => $_SERVER['REMOTE_ADDR'] ?? '',
+
         ]);
     } catch (Exception $e) {
         error_log($e->getMessage());
