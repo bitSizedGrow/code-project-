@@ -136,7 +136,7 @@ ob_start();
                                 <td>
                                     <a href="<?= h(appPath('modules/financial/report.php?id=' . (int)$projectId)) ?>"
                                         class="btn-preview" style="font-size:12px;padding:6px 12px;border-radius:6px;text-decoration:none;">
-                                        <i class="bi bi-eye me-1"></i>View
+                                        <i class="bi bi-eye me-1"></i>View Financial Report
                                     </a>
                                 </td>
                                 <td>
@@ -154,11 +154,11 @@ ob_start();
                                         <div style="display:flex;">
                                             <a href="<?= h(appPath('modules/progress/view.php?id=' . (int)$projectId)) ?>"
                                                 class="btn-preview" style="font-size:12px;padding:6px 12px;border-radius:6px;text-decoration:none;margin: 5px;">
-                                                <i class="bi bi-eye me-1"></i>View
+                                                <i class="bi bi-eye me-1"></i>View Status
                                             </a>
                                             <a href="<?= h(appPath('modules/progress/terminate.php?id=' . (int)$projectId)) ?>"
                                                 class="btn-preview-danger" style="font-size:12px;padding:6px 12px;border-radius:6px;text-decoration:none;">
-                                                <i class="bi bi-eye me-1"></i>Terminate Project
+                                                <i class="bi bi-stop-circle"></i>Terminate Project
                                             </a>
                                         </div>
                                     </div>
