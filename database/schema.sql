@@ -150,6 +150,8 @@ CREATE TABLE activity_logs (
     user_id INT UNSIGNED,
     project_id INT UNSIGNED,
     action VARCHAR(200) NOT NULL,
+    document_type ENUM 'approval_letter','ppis_letter','release_letter','pdc','revised_annex_d','ipo','acknowledgement','cert_first_untagging','original_receipt','matrix_of_inspection','cert_final_untagging','certified_true_copy','audited_financial_report','supporting_documents' DEFAULT NULL,
+    file_path VARCHAR(500),
     details TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     INDEX idx_user (user_id),
